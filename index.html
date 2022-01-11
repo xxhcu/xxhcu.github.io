@@ -64,6 +64,84 @@
       <div class="outer">
         <section id="main">
   
+    <article id="post-值得纪念的第一个Flag-pwnable-kr-fd" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2022/01/11/%E5%80%BC%E5%BE%97%E7%BA%AA%E5%BF%B5%E7%9A%84%E7%AC%AC%E4%B8%80%E4%B8%AAFlag-pwnable-kr-fd/" class="article-date">
+  <time datetime="2022-01-11T05:23:25.000Z" itemprop="datePublished">2022-01-11</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2022/01/11/%E5%80%BC%E5%BE%97%E7%BA%AA%E5%BF%B5%E7%9A%84%E7%AC%AC%E4%B8%80%E4%B8%AAFlag-pwnable-kr-fd/">值得纪念的第一个Flag pwnable.kr:fd</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h1 id="pwnable挑战-fd"><a href="#pwnable挑战-fd" class="headerlink" title="pwnable挑战 fd"></a>pwnable挑战 fd</h1><ul>
+<li>题目来源 pwnable.kr</li>
+</ul>
+<p>这个挑战其实比较简单，利用到的就是Linux系统下的file-descriptor（fd 文件描述符）。</p>
+<p>在Linux下最重要的fd有三个<br>| |0|1|2|<br>|-|-|-|-|<br>|表示|标准输入|标准输出|标准错误|</p>
+<p>对于挑战的fd程序，我们通过阅读源代码fd.c，可以发现整个程序的流程是利用输入的参数与0x1234的差作为read的第一个参数，再通过read从某一个位置读取字符串，通过对字符串进行判断来判断是否成功。根据read函数的定义，其第一个参数，其实就是文件描述符fd，所以，将0x1234转换为10进制，作为参数运行fd程序，会发现程序在等待读取控制台的输入，这时只需要输入对应的字符串即可。</p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://example.com/2022/01/11/%E5%80%BC%E5%BE%97%E7%BA%AA%E5%BF%B5%E7%9A%84%E7%AC%AC%E4%B8%80%E4%B8%AAFlag-pwnable-kr-fd/" data-id="cky9peyt40001rcv232bfhrw9" class="article-share-link">Share</a>
+      
+      
+    </footer>
+  </div>
+  
+</article>
+
+
+  
+    <article id="post-第一篇文章" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2022/01/11/%E7%AC%AC%E4%B8%80%E7%AF%87%E6%96%87%E7%AB%A0/" class="article-date">
+  <time datetime="2022-01-11T05:19:39.000Z" itemprop="datePublished">2022-01-11</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2022/01/11/%E7%AC%AC%E4%B8%80%E7%AF%87%E6%96%87%E7%AB%A0/">第一篇文章</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://example.com/2022/01/11/%E7%AC%AC%E4%B8%80%E7%AF%87%E6%96%87%E7%AB%A0/" data-id="cky9peyt00000rcv2az2zea7w" class="article-share-link">Share</a>
+      
+      
+    </footer>
+  </div>
+  
+</article>
+
+
+  
     <article id="post-hello-world" class="article article-type-post" itemscope itemprop="blogPost">
   <div class="article-meta">
     <a href="/2022/01/11/hello-world/" class="article-date">
@@ -142,6 +220,14 @@
     <h3 class="widget-title">Recent Posts</h3>
     <div class="widget">
       <ul>
+        
+          <li>
+            <a href="/2022/01/11/%E5%80%BC%E5%BE%97%E7%BA%AA%E5%BF%B5%E7%9A%84%E7%AC%AC%E4%B8%80%E4%B8%AAFlag-pwnable-kr-fd/">值得纪念的第一个Flag pwnable.kr:fd</a>
+          </li>
+        
+          <li>
+            <a href="/2022/01/11/%E7%AC%AC%E4%B8%80%E7%AF%87%E6%96%87%E7%AB%A0/">第一篇文章</a>
+          </li>
         
           <li>
             <a href="/2022/01/11/hello-world/">Hello World</a>
